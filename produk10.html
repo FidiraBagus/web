@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Detail Produk - Kalung 10</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function tambahKeKeranjang(nama, harga) {
+      let keranjang = JSON.parse(localStorage.getItem('keranjang')) || [];
+      keranjang.push({ nama: nama, harga: harga });
+      localStorage.setItem('keranjang', JSON.stringify(keranjang));
+      alert(nama + " telah ditambahkan ke keranjang!");
+    }
+  </script>
+  <style>
+    .produk-detail {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .produk-detail img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+    }
+
+    .produk-detail h2 {
+      margin-top: 20px;
+      font-size: 24px;
+    }
+
+    .produk-detail p {
+      font-size: 16px;
+      color: #555;
+      text-align: left;
+      margin: 15px 0;
+    }
+
+    .produk-detail ul {
+      text-align: left;
+      margin: 0 auto;
+      padding-left: 20px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .produk-detail button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .produk-detail button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Detail Produk</h1>
+    <div class="menu">
+      <a href="shop.html">Belanja</a>
+      <a href="cart.html">Keranjang</a>
+      <a href="index.html">Beranda</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="produk-detail">
+      <img src="gambar 10.jpg" alt="Kalung Titanium `Wings of Valor`">
+      <h2>Kalung Titanium `Wings of Valor`</h2>
+      <p><strong>Harga:</strong> Rp 75.000</p>
+      <p><strong>Deskripsi:</strong> Kalung eksklusif "Wings of Valor" hadir dengan desain ikonik berbentuk pedang bersayap, simbol kekuatan, kehormatan, dan kebebasan. 
+        Didesain dengan detail yang presisi, produk ini memberikan kesan maskulin dan elegan saat digunakan.
+        Terbuat dari titanium asli berkualitas tinggi, kalung ini sangat cocok untuk kamu yang aktif dan menginginkan aksesori yang kuat, tahan lama, dan tidak mudah luntur.</p>
+      <p><strong>Spesifikasi:</strong></p>
+      <ul>
+        <li>Bahan Liontin: Titanium Asli</li>
+        <li>Bahan Rantai: Stainless Steel Anti Karat</li>
+        <li>Ukuran Liontin: ± 5,5 cm x 4,5 cm</li>
+        <li>Berat: ± 30 gram</li>
+        <li>Warna: Silver Metalik</li>
+        <li>Panjang Rantai: ± 60 cm</li>
+      </ul>
+      <button onclick="tambahKeKeranjang('Kalung Titanium `Wings of Valor`', 75000)">Tambah ke Keranjang</button>
+    </div>
+  </main>
+
+  <div style="text-align: center; margin-bottom: 30px;">
+    <a href="index.html">
+      <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Kembali ke Halaman Beranda
+      </button>
+    </a>
+  </div>
+
+  <footer style="text-align: center; padding: 20px; background-color: #d4af37; color: white;">
+    <p>© 2025 Toko Kalung Bagus. Hak Cipta Dilindungi.</p>
+  </footer>
+</body>
+</html>

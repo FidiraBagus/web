@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Detail Produk - Kalung 11</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function tambahKeKeranjang(nama, harga) {
+      let keranjang = JSON.parse(localStorage.getItem('keranjang')) || [];
+      keranjang.push({ nama: nama, harga: harga });
+      localStorage.setItem('keranjang', JSON.stringify(keranjang));
+      alert(nama + " telah ditambahkan ke keranjang!");
+    }
+  </script>
+  <style>
+    .produk-detail {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .produk-detail img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+    }
+
+    .produk-detail h2 {
+      margin-top: 20px;
+      font-size: 24px;
+    }
+
+    .produk-detail p {
+      font-size: 16px;
+      color: #555;
+      text-align: left;
+      margin: 15px 0;
+    }
+
+    .produk-detail ul {
+      text-align: left;
+      margin: 0 auto;
+      padding-left: 20px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .produk-detail button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .produk-detail button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Detail Produk</h1>
+    <div class="menu">
+      <a href="shop.html">Belanja</a>
+      <a href="cart.html">Keranjang</a>
+      <a href="index.html">Beranda</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="produk-detail">
+      <img src="gambar 11.jpg" alt="Kalung Custom Foto `Memory Tag`">
+      <h2>Kalung Custom Foto `Memory Tag`</h2>
+      <p><strong>Harga:</strong> Rp 75.000</p>
+      <p><strong>Deskripsi:</strong> Abadikan momen spesial Anda dalam sebuah kalung eksklusif dengan ukiran foto laser presisi tinggi. 
+        Kalung "Memory Tag" hadir dalam desain elegan berbentuk persegi panjang dengan permukaan mengilap, cocok untuk hadiah romantis, kenang-kenangan sahabat, atau simbol kebersamaan keluarga.
+        Dengan pilihan pengukiran nama, tanggal, atau pesan khusus, kalung ini bukan hanya aksesori, tapi juga kenangan yang bisa dikenakan setiap hari.</p>
+      <p><strong>Spesifikasi:</strong></p>
+      <ul>
+        <li>Bahan Liontin: Stainless Steel Premium</li>
+        <li>Ukuran Liontin: ± 3,5 cm x 2,5 cm</li>
+        <li>Panjang Rantai: ± 60 cm (bisa custom)</li>
+        <li>Warna: Silver Mengilap</li>
+        <li>Teknik Ukir: Laser Engraving Presisi Tinggi</li><br>
+      <p><strong>Kustomisasi:</strong></p>
+
+           1.  Bisa upload foto sendiri<br>
+            
+           2. Tambahan nama, tanggal, atau kalimat singkat<br></li>
+      </ul>
+      <button onclick="tambahKeKeranjang('Kalung Custom Foto `Memory Tag`', 75000)">Tambah ke Keranjang</button>
+    </div>
+  </main>
+
+  <div style="text-align: center; margin-bottom: 30px;">
+    <a href="index.html">
+      <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Kembali ke Halaman Beranda
+      </button>
+    </a>
+  </div>
+
+  <footer style="text-align: center; padding: 20px; background-color: #d4af37; color: white;">
+    <p>© 2025 Toko Kalung Bagus. Hak Cipta Dilindungi.</p>
+  </footer>
+</body>
+</html>

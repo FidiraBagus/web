@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Belanja - Toko Kalung Bagus</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #000000;
+    }
+    header {
+      background-color: #d4af37;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .menu a {
+      margin: 0 10px;
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .produk-container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+    .produk {
+      text-align: center;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: white;
+    }
+    .produk img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .produk h4 {
+      margin: 10px 0 0 0;
+      color: #333;
+    }
+    button {
+      background-color: #5cb85c;
+      color: white;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 5px;
+    }
+    @media (max-width: 1200px) {
+      .produk-container {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+    @media (max-width: 800px) {
+      .produk-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 500px) {
+      .produk-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #d4af37;
+      color: white;
+    }
+  </style>
+  <script>
+    function tambahKeKeranjang(nama, harga) {
+      let keranjang = JSON.parse(localStorage.getItem('keranjang')) || [];
+      keranjang.push({ nama: nama, harga: harga });
+      localStorage.setItem('keranjang', JSON.stringify(keranjang));
+      alert(nama + " telah ditambahkan ke keranjang!");
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Belanja di Toko Kalung Bagus</h1>
+    <div class="menu">
+      <a href="index.html">Beranda</a>
+      <a href="cart.html">Keranjang</a>
+      <a href="about.html">Tentang</a>
+      <a href="contact.html">Kontak</a>
+      <a href="login.html">Masuk</a>
+      <a href="register.html">Daftar</a>
+    </div>
+  </header>
+
+  <div class="produk-container">
+    <div class="produk">
+      <a href="produk1.html"><img src="gambar 1.jpg" alt="Kalung Peluru Stainless Steel Eksklusif"></a>
+      <h4>Kalung Peluru Stainless Steel Eksklusif</h4>
+      <h4>Rp 50.000</h4>
+      <button onclick="tambahKeKeranjang('Kalung Peluru Stainless Steel Eksklusif', 50000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="produk">
+      <a href="produk2.html"><img src="gambar 2.jpg" alt="Kalung Kompas Bajak Laut “One Piece”"></a>
+      <h4>Kalung Kompas Bajak Laut “One Piece”</h4>
+      <h4>Rp 65.000</h4>
+      <button onclick="tambahKeKeranjang('Kalung Kompas Bajak Laut “One Piece”', 65000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="produk">
+      <a href="produk3.html"><img src="gambar 3.jpg" alt="Kalung Dog Tag Stainless Steel Pria"></a>
+      <h4>Kalung Dog Tag Stainless Steel Pria</h4>
+      <h4>Rp 70.000</h4>
+      <button onclick="tambahKeKeranjang('Kalung Dog Tag Stainless Steel Pria', 70000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="produk">
+      <a href="produk4.html"><img src="gambar 4.jpg" alt="Kalung Salib Katolik Stainless Steel dengan Tali Kulit"></a>
+      <h4>Kalung Salib Katolik Stainless Steel dengan Tali Kulit</h4>
+      <h4>Rp 55.000</h4>
+      <button onclick="tambahKeKeranjang('Kalung Salib Katolik Stainless Steel dengan Tali Kulit', 55000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="produk">
+      <a href="produk5.html"><img src="gambar 5.jpg" alt="Set Kalung & Anting Fashion Logo Gucci"></a>
+      <h4>Set Kalung & Anting Fashion Logo Gucci</h4>
+      <h4>Rp 60.000</h4>
+      <button onclick="tambahKeKeranjang('Set Kalung & Anting Fashion Logo Gucci', 60000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="produk">
+      <a href="produk6.html"><img src="gambar 6.jpg" alt="Kalung Skull Medusa Stainless Steel"></a>
+      <h4>Kalung Skull Medusa Stainless Steel</h4>
+      <h4>Rp 80.000</h4>
+      <button onclick="tambahKeKeranjang('Kalung Skull Medusa Stainless Steel', 80000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="produk">
+      <a href="produk7.html"><img src="gambar 7.jpg" alt="Kalung Gold Crystal Elegance"></a>
+      <h4>Kalung Gold Crystal Elegance</h4>
+      <h4>Rp 90.000</h4>
+      <button onclick="tambahKeKeranjang('Kalung Gold Crystal Elegance', 90000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="produk">
+      <a href="produk8.html"><img src="gambar 8.jpg" alt="Kalung Crescent Moon Hitam"></a>
+      <h4>Kalung Crescent Moon Hitam</h4>
+      <h4>Rp 45.000</h4>
+      <button onclick="tambahKeKeranjang('Kalung Crescent Moon Hitam', 45000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="produk">
+      <a href="produk9.html"><img src="gambar 9.jpg" alt="Kalung Rantai Box Silver Pria"></a>
+      <h4>Kalung Rantai Box Silver Pria</h4>
+      <h4>Rp 50.000</h4>
+      <button onclick="tambahKeKeranjang('Kalung Rantai Box Silver Pria', 50000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="produk">
+      <a href="produk10.html"><img src="gambar 10.jpg" alt="Kalung Titanium `Wings of Valor`"></a>
+      <h4>Kalung Titanium `Wings of Valor`</h4>
+      <h4>Rp 75.000</h4>
+      <button onclick="tambahKeKeranjang('Kalung Titanium `Wings of Valor`', 75000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="produk">
+      <a href="produk11.html"><img src="gambar 11.jpg" alt="Kalung Custom Foto `Memory Tag`"></a>
+      <h4>Kalung Custom Foto `Memory Tag`</h4>
+      <h4>Rp 75.000</h4>
+      <button onclick="tambahKeKeranjang('Kalung Custom Foto `Memory Tag`', 75000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="produk">
+      <a href="produk12.html"><img src="gambar 12.jpg" alt="Kalung Hip-Hop `Jesus Piece Gold Edition`"></a>
+      <h4>Kalung Hip-Hop `Jesus Piece Gold Edition`</h4>
+      <h4>Rp 75.000</h4>
+      <button onclick="tambahKeKeranjang('Kalung Hip-Hop `Jesus Piece Gold Edition`', 75000)">Tambah ke Keranjang</button>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-bottom: 30px;">
+    <a href="index.html">
+      <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Kembali ke Halaman Beranda
+      </button>
+    </a>
+  </div>
+
+  <footer>
+    <p>© 2025 Toko Kalung Bagus. Hak Cipta Dilindungi.</p>
+  </footer>
+</body>
+</html>

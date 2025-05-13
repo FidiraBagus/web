@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Detail Produk - Kalung 1</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function tambahKeKeranjang(nama, harga) {
+      let keranjang = JSON.parse(localStorage.getItem('keranjang')) || [];
+      keranjang.push({ nama: nama, harga: harga });
+      localStorage.setItem('keranjang', JSON.stringify(keranjang));
+      alert(nama + " telah ditambahkan ke keranjang!");
+    }
+  </script>
+  <style>
+    .produk-detail {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .produk-detail img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+    }
+
+    .produk-detail h2 {
+      margin-top: 20px;
+      font-size: 24px;
+    }
+
+    .produk-detail p {
+      font-size: 16px;
+      color: #555;
+      text-align: left;
+      margin: 15px 0;
+    }
+
+    .produk-detail ul {
+      text-align: left;
+      margin: 0 auto;
+      padding-left: 20px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .produk-detail button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .produk-detail button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Detail Produk</h1>
+    <div class="menu">
+      <a href="shop.html">Belanja</a>
+      <a href="cart.html">Keranjang</a>
+      <a href="index.html">Beranda</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="produk-detail">
+      <img src="gambar 1.jpg" alt="Kalung Peluru Stainless Steel Eksklusif">
+      <h2>Kalung Peluru Stainless Steel Eksklusif</h2>
+      <p><strong>Harga:</strong> Rp 50.000</p>
+      <p><strong>Deskripsi:</strong> Tampilkan gaya maskulin dan berani dengan Kalung Peluru Stainless Steel Eksklusif dari Hora Collection. 
+        Kalung ini terbuat dari rantai bola stainless steel berkualitas tinggi dengan liontin berbentuk peluru yang elegan dan tahan karat. 
+        Cocok untuk Anda yang ingin tampil beda, kalung ini bisa dipakai sehari-hari atau sebagai aksesori fashion untuk acara khusus. 
+        Desainnya yang kokoh memberikan kesan gagah namun tetap stylish.</p>
+      <p><strong>Spesifikasi:</strong></p>
+      <ul>
+        <li>Bahan: Stainless steel</li>
+        <li>Panjang rantai: ±70 cm</li>
+        <li>Ukuran liontin: ±5 cm</li>
+        <li>Warna: Silver mengkilap</li>
+        <li>Anti karat dan tidak mudah pudar</li>
+      </ul>
+      <button onclick="tambahKeKeranjang('Kalung Peluru Stainless Steel Eksklusif', 50000)">Tambah ke Keranjang</button>
+    </div>
+  </main>
+
+  <div style="text-align: center; margin-bottom: 30px;">
+    <a href="index.html">
+      <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Kembali ke Halaman Beranda
+      </button>
+    </a>
+  </div>
+
+  <footer style="text-align: center; padding: 20px; background-color: #d4af37; color: white;">
+    <p>© 2025 Toko Kalung Bagus. Hak Cipta Dilindungi.</p>
+  </footer>
+</body>
+</html>
